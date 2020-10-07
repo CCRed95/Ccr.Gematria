@@ -7,7 +7,7 @@ namespace Ccr.Gematria.Calculator.Cyphers
 		public static int Calculate<TCypher>(string text)
 			where TCypher : ICypher, new()
 		{
-			var cypher = new TCypher();
+			var cypher = CypherProvider.GetCypherInstance<TCypher>();
 
 			var result = text.ToCharArray()
 				.Select(t => cypher.GetValue(t))

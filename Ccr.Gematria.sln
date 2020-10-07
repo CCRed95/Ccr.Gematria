@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ccr.Gematria.Calculator", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccr.Gematria.Terminal", "Ccr.Gematria.Terminal\Ccr.Gematria.Terminal.csproj", "{8DF47055-50DF-4E2F-B68A-FFB303968F59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccr.Gematria.Data", "Ccr.Gematria.Data\Ccr.Gematria.Data.csproj", "{32706580-C552-4CD9-BA94-E3EBAEABA34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ccr.Gematria.Data.Core", "Ccr.Gematria.Data.Core\Ccr.Gematria.Data.Core.csproj", "{CAB5346C-04E3-4934-A0E6-E00EF6349750}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{8DF47055-50DF-4E2F-B68A-FFB303968F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DF47055-50DF-4E2F-B68A-FFB303968F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DF47055-50DF-4E2F-B68A-FFB303968F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32706580-C552-4CD9-BA94-E3EBAEABA34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32706580-C552-4CD9-BA94-E3EBAEABA34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32706580-C552-4CD9-BA94-E3EBAEABA34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32706580-C552-4CD9-BA94-E3EBAEABA34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB5346C-04E3-4934-A0E6-E00EF6349750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB5346C-04E3-4934-A0E6-E00EF6349750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB5346C-04E3-4934-A0E6-E00EF6349750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB5346C-04E3-4934-A0E6-E00EF6349750}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
