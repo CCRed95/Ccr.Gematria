@@ -13,7 +13,7 @@ namespace Ccr.Gematria.Calculator.Cyphers
 			{
 				'a' => 1,
 				'b' => 2,
-				_ => 0;
+				_ => 0
 			};
 
 			//if (!char.IsLetter(@char))
