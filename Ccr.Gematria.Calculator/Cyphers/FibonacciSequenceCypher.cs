@@ -11,8 +11,6 @@ namespace Ccr.Gematria.Calculator.Cyphers
 				return 0;
 
 			var indexInAlphabet = GetIndexInAlphabet(@char);
-			if (indexInAlphabet >= 25)
-				return 1;
 
 			var fibonacci = GetNthFibonacci(indexInAlphabet);
 			

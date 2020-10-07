@@ -13,8 +13,8 @@ namespace Ccr.Gematria
 			InitializeComponent();
 
 			Console.WriteLine("Ccr Gematria Calculator");
-			Console.WriteLine("  Cypher: English Ordinal Cypher");
-			
+			Console.WriteLine($"  Cypher: {nameof(FibonacciSequenceCypher)}");
+
 			var quit = false;
 
 			while (!quit)
@@ -27,27 +27,33 @@ namespace Ccr.Gematria
 					case "q":
 					case "quit":
 					case "exit":
-					{
-						quit = true;
-						break;
-					}
-					default:
-					{
-						var result = GematriaCalculator.Calculate<EnglishOrdinalCypher>(text);
-						Console.WriteLine($"    Total: {result}");
-						Console.WriteLine();
+						{
+							quit = true;
+							break;
+						}
+					case "fib":
+						{
+							var cypher = new FibonacciSequenceCypher();
 
-						break;
-					}
+							for (var c = 'a'; c <= 'z'; c++)
+							{
+								var value = cypher.GetValue(c);
+								Console.WriteLine($"    {c} -> {value}");
+							}
+
+							break;
+						}
+					default:
+						{
+							var result = GematriaCalculator.Calculate<FibonacciSequenceCypher>(text);
+							Console.Write($"    Total: {result}");
+							Console.WriteLine();
+
+							break;
+						}
 				}
 			}
 		}
 	}
 }
-/*			var cypher = new FibonacciSequenceCypher();
-
-			for (var c = 'a'; c <= 'z'; c++)
-			{
-				var value = cypher.GetValue(c);
-				Console.WriteLine($"    {c} -> {value}");
-			}*/
+/*		*/
