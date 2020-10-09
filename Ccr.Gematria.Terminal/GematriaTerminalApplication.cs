@@ -14,6 +14,7 @@ namespace Ccr.Gematria.Terminal
 			= new List<TerminalCommandBase>
 			{
 				new FibonacciCommand(),
+				new CalculateCommand()
 			};
 
 

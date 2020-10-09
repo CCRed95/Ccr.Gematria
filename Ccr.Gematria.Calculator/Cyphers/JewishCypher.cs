@@ -1,9 +1,5 @@
-﻿using System;
-using System.Runtime.InteropServices.ComTypes;
-
-namespace Ccr.Gematria.Calculator.Cyphers
+﻿namespace Ccr.Gematria.Calculator.Cyphers
 {
-	//TODO finish this
 	public class JewishCypher
 		: EnglishCypherBase
 	{
@@ -13,24 +9,33 @@ namespace Ccr.Gematria.Calculator.Cyphers
 			{
 				'a' => 1,
 				'b' => 2,
+				'c' => 3,
+				'd' => 4,
+				'e' => 5,
+				'f' => 6,
+				'g' => 7,
+				'h' => 8,
+				'i' => 9,
+				'k' => 10,
+				'l' => 20,
+				'm' => 30,
+				'n' => 40,
+				'o' => 50,
+				'p' => 60,
+				'q' => 70,
+				'r' => 80,
+				's' => 90,
+				't' => 100,
+				'u' => 200,
+				'x' => 300,
+				'y' => 400,
+				'z' => 500,
+				'j' => 600,
+				'v' => 700,
+				'&' => 800,
+				'w' => 900,
 				_ => 0
 			};
-
-			//if (!char.IsLetter(@char))
-			//	return 0;
-
-			//var indexInAlphabet = GetIndexInAlphabet(@char);
-
-			//if (@char >= 'a' && @char <= 'i')
-			//{
-			//	return indexInAlphabet;
-			//}
-			//if (@char >= 'k' && @char <= 's')
-			//{
-			//	return (indexInAlphabet - 10) * 10;
-			//}
-
-			//throw new NotImplementedException();
 		}
 	}
 }

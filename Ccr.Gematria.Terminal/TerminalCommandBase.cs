@@ -21,10 +21,10 @@ namespace Ccr.Gematria.Terminal
 			{
 				try
 				{
-					XConsole
-						.Write($"Starting Command: ", Swatch.Cyan)
-						.Write($"{CommandName.Quote()}", Swatch.Teal)
-						.WriteLine(" with no arguments", Swatch.Cyan);
+					//XConsole
+					//	.Write($"Starting Command: ", Swatch.Cyan)
+					//	.Write($"{CommandName.Quote()}", Swatch.Teal)
+					//	.WriteLine(" with no arguments", Swatch.Cyan);
 
 					command.Execute();
 				}
@@ -76,17 +76,17 @@ namespace Ccr.Gematria.Terminal
 
 							try
 							{
-								XConsole
-									.Write($"Starting Command: ", Swatch.Cyan)
-									.Write($"{CommandName.Quote()}", Swatch.Teal)
-									.Write(" with args ", Swatch.Cyan)
-									.WriteLine($"{args.ToString().SQuote()}", Swatch.Teal);
+								//XConsole
+								//	.Write($"Starting Command: ", Swatch.Cyan)
+								//	.Write($"{CommandName.Quote()}", Swatch.Teal)
+								//	.Write(" with args ", Swatch.Cyan)
+								//	.WriteLine($"{args.ToString().SQuote()}", Swatch.Teal);
 
 								methodInfo.Invoke(this, new[] { args });
 
-								XConsole
-									.WriteLine("command completed, with no errors.", Swatch.Green)
-									.WriteLine();
+								//XConsole
+								//	.WriteLine("command completed, with no errors.", Swatch.Green)
+								//	.WriteLine();
 							}
 							catch (Exception ex)
 							{
