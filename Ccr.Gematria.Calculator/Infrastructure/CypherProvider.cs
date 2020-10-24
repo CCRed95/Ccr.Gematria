@@ -1,15 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Ccr.Gematria.Calculator.Cyphers;
 using Ccr.Std.Core.Extensions;
 
-namespace Ccr.Gematria.Calculator.Cyphers
+namespace Ccr.Gematria.Calculator.Infrastructure
 {
 	public sealed class CypherProvider
 	{
+		private static ICypher[] _allCyphers;
 		private static readonly IDictionary<Type, ICypher> _cypherCache
 			= new Dictionary<Type, ICypher>();
 
-		
+
+		public static IReadOnlyCollection<ICypher> AllCyphers
+		{
+			get
+			{
+				if (_allCyphers != null)
+					return _allCyphers;
+
+				var cypherType = typeof(ICypher);
+
+				var cypherTypeList = cypherType
+					.Assembly
+					.GetExportedTypes()
+					.Where(t => t != typeof(ValueMapCypher))
+					.Where(t => t.Namespace != null)
+					.Where(t => t.Namespace.StartsWith("Ccr.Gematria.Calculator.Cyphers"))
+					.Where(t => !t.IsAbstract && !t.IsInterface)
+					.ToArray();
+
+				var cypherInstances = cypherTypeList
+					.Select(GetCypherInstanceBase)
+					.ToArray();
+
+				_allCyphers = cypherInstances;
+				return _allCyphers;
+			}
+		}
+
+
 		public static ICypher GetCypherInstanceBase(Type cypherType)
 		{
 			if (_cypherCache.TryGetValue(cypherType, out var cypher))

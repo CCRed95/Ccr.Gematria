@@ -1,10 +1,16 @@
 ﻿using System.Linq;
+using Ccr.Gematria.Calculator.Infrastructure;
 
 namespace Ccr.Gematria.Calculator.Cyphers
 {
 	public class ReverseFullReductionCypher
 		: EnglishCypherBase
 	{
+		public override string Name => "Reverse Full Reduction";
+
+		public override int[] RGBColor => new[] { 255, 234, 0 };
+
+
 		public override int GetValue(char @char)
 		{
 			if (!char.IsLetter(@char))

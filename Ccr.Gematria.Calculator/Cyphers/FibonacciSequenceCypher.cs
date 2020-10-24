@@ -1,10 +1,20 @@
 ﻿using System.Linq;
+using Ccr.Gematria.Calculator.Infrastructure;
 
 namespace Ccr.Gematria.Calculator.Cyphers
 {
 	public class FibonacciSequenceCypher
 		: EnglishCypherBase
 	{
+		public override string Name => "Fibonacci Sequence";
+
+		public override string Category => "Custom - Math";
+
+		public override bool IsExperimental => true;
+
+		public override int[] RGBColor => new[] { 245, 0, 87 };
+		
+
 		public override int GetValue(char @char)
 		{
 			if (!char.IsLetter(@char))
@@ -13,7 +23,7 @@ namespace Ccr.Gematria.Calculator.Cyphers
 			var indexInAlphabet = GetIndexInAlphabet(@char);
 
 			var fibonacci = GetNthFibonacci(indexInAlphabet);
-			
+
 			var value = fibonacci;
 			var digits = Utilities.GetDigits(value);
 

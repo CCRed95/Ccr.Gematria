@@ -60,18 +60,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Markup\Converters\IntArrayToSolidColorBrushConverter.cs" />
+    <Compile Include="Models\GematriaCypherResult.cs" />
+    <Compile Include="ViewModels\RootViewModel.cs" />
+    <Compile Include="Views\RootView.xaml.cs">
+      <DependentUpon>RootView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Views\RootView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -110,17 +114,30 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Caliburn.Micro">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Ccr.MaterialDesign">
+      <Version>2.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Ccr.MDHybrid">
+      <Version>3.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Ccr.PresentationCore">
+      <Version>2.6.0</Version>
+    </PackageReference>
     <PackageReference Include="Ccr.Std.Core">
       <Version>2.2.0</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore">
-      <Version>3.1.8</Version>
+    <PackageReference Include="Ccr.Xaml">
+      <Version>2.2.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
-      <Version>3.1.8</Version>
+      <Version>3.1.9</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

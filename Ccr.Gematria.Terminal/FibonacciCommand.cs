@@ -1,5 +1,6 @@
 ﻿using System;
 using Ccr.Gematria.Calculator.Cyphers;
+using Ccr.Gematria.Calculator.Infrastructure;
 
 namespace Ccr.Gematria.Terminal
 {

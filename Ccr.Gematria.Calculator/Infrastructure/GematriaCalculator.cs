@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Ccr.Gematria.Calculator.Cyphers
+namespace Ccr.Gematria.Calculator.Infrastructure
 {
 	public sealed class GematriaCalculator
 	{

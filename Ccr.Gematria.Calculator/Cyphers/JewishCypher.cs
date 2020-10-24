@@ -1,8 +1,15 @@
-﻿namespace Ccr.Gematria.Calculator.Cyphers
+﻿using Ccr.Gematria.Calculator.Infrastructure;
+
+namespace Ccr.Gematria.Calculator.Cyphers
 {
 	public class JewishCypher
 		: EnglishCypherBase
 	{
+		public override string Name => "Jewish";
+
+		public override int[] RGBColor => new[] { 0, 229, 255 };
+
+
 		public override int GetValue(char @char)
 		{
 			return char.ToLower(@char) switch

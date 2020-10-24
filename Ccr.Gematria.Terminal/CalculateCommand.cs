@@ -1,6 +1,7 @@
 ﻿using System;
 using Ccr.Colorization.Mappings;
 using Ccr.Gematria.Calculator.Cyphers;
+using Ccr.Gematria.Calculator.Infrastructure;
 using static Ccr.Terminal.ExtendedConsole;
 
 namespace Ccr.Gematria.Terminal
